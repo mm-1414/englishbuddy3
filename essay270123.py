@@ -7,7 +7,7 @@ from supabase import create_client
 
 # --- Supabase設定(自分の情報に置き換えてください) ---
 SUPABASE_URL = "https://vseylemehskmfrwpuoey.supabase.co"  # あなたのSupabaseのURL
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzZXlsZW1laHNrbWZyd3B1b2V5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NjI3MTQwOSwiZXhwIjoyMDYxODQ3NDA5fQ.uFXUDYFDY9KvARgbiOFMVukbtjUIHITJce59ghH76as"      # Service Role Key(秘密鍵)
+SUPABASE_KEY = "your-service-role-key"      # Service Role Key(秘密鍵)
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # --- OpenAI設定 ---
