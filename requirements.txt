@@ -1,4 +1,5 @@
-openai
+openai 
 streamlit
 pandas
-supabase-py
+gspread
+google-auth
