@@ -6,7 +6,7 @@ from datetime import datetime
 from supabase import create_client
 
 # --- Supabase設定(自分の情報に置き換えてください) ---
-SUPABASE_URL = "https://vseylemehskmfrwpuoey.supabase.co"  # あなたのSupabaseのURL
+SUPABASE_URL = "https://xxxxx.supabase.co"  # あなたのSupabaseのURL
 SUPABASE_KEY = "your-service-role-key"      # Service Role Key(秘密鍵)
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
