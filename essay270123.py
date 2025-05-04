@@ -3,7 +3,8 @@ import streamlit as st
 import pandas as pd
 import os
 from datetime import datetime
-from supabase import create_client
+import gspread
+from google.oauth2.service_account import Credentials
 
 # --- Supabase設定(自分の情報に置き換えてください) ---
 SUPABASE_URL = "https://xxxxx.supabase.co"  # あなたのSupabaseのURL
