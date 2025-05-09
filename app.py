@@ -6,21 +6,19 @@ import gspread
 from google.oauth2.service_account import Credentials
 import openai
 
-# --- 仮のOpenAI APIキー(必ずあとでsecretsに戻す) ---
-openai.api_key = "sk-dummy"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-# --- 仮のGoogle認証情報(必ずあとでsecretsに戻す) ---
 service_account_info = {
-    "type": "service_account",
-    "project_id": "dummy-project",
-    "private_key_id": "dummy_key_id",
-    "private_key": "-----BEGIN PRIVATE KEY-----\\ndummykey\\n-----END PRIVATE KEY-----\\n",
-    "client_email": "dummy@dummy.iam.gserviceaccount.com",
-    "client_id": "dummy-client-id",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dummy.iam.gserviceaccount.com"
+    "type": st.secrets["GSHEET_TYPE"],
+    "project_id": st.secrets["GSHEET_PROJECT_ID"],
+    "private_key_id": st.secrets["GSHEET_PRIVATE_KEY_ID"],
+    "private_key": st.secrets["GSHEET_PRIVATE_KEY"],
+    "client_email": st.secrets["GSHEET_CLIENT_EMAIL"],
+    "client_id": st.secrets["GSHEET_CLIENT_ID"],
+    "auth_uri": st.secrets["GSHEET_AUTH_URI"],
+    "token_uri": st.secrets["GSHEET_TOKEN_URI"],
+    "auth_provider_x509_cert_url": st.secrets["GSHEET_AUTH_PROVIDER_X509_CERT_URL"],
+    "client_x509_cert_url": st.secrets["GSHEET_CLIENT_X509_CERT_URL"]
 }
 
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
