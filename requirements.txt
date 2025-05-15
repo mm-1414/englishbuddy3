@@ -4,3 +4,6 @@ pandas
 gspread
 google-auth
 google-auth-oauthlib
+numpy
+requests
+python-dotenv
