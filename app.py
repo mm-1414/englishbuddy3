@@ -1,4 +1,23 @@
 import streamlit as st
+
+# 正しいコード（例：Stripe決済後に表示するコード）
+VALID_CODE = "goukaku0428"
+
+# セッション状態で認証フラグを管理
+if "authenticated" not in st.session_state:
+    st.session_state["authenticated"] = False
+
+if not st.session_state["authenticated"]:
+    st.title("認証コードを入力してください")
+    code = st.text_input("コード", type="password")
+    if st.button("送信"):
+        if code == VALID_CODE:
+            st.session_state["authenticated"] = True
+            st.success("認証に成功しました！アプリを利用できます。")
+            st.experimental_rerun()
+        else:
+            st.error("無効なコードです。")
+    st.stop()import streamlit as st
 import pandas as pd
 from datetime import datetime
 import openai
